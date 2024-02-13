@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar bg-green-300">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <input
+              type="text"
+              placeholder="Search"
+              class="input input-bordered w-24 md:w-auto"
+            />
+          </div>
+          <div class="dropdown dropdown-end">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost btn-circle avatar"
+            >
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <ul
+              tabindex="0"
+              class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container mx-auto flex flex-col lg:flex-row">
+        <!-- calculated data area -->
+        <div class="flex-1 grid gap-2 space-x-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Triangle shape -->
+          <div class="card max-w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="./images/triangle.png"
+                alt="triangle"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-3xl">Triangle</h2>
+              <p class="mt-3">Area (A) = 0.5 x b x h</p>
+              <div class="my-5">
+                <input
+                  class="bg-slate-200 rounded-sm w-24 mr-2 size-9 text-center"
+                  type="text"
+                  name="triangle"
+                  id="triangle-base"
+                  placeholder="b"
+                /><span>cm</span>
+                <input
+                  class="bg-slate-200 rounded-sm w-24 mr-2 size-9 text-center"
+                  type="text"
+                  name=""
+                  id="triangle-height"
+                  placeholder="h"
+                /><span>cm</span>
+              </div>
+              <p>Area: <span id="display-area">0</span> <span>cm<sup>2</sup></span></p>
+              <div class="card-actions w-full mt-3">
+                <button class="btn bg-green-300 w-full text-xl" id="button">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Rectangle shape -->
+          <div class="card max-w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="./images/rectangle.png"
+                alt="rectangle"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-3xl">Rectangle</h2>
+              <p class="mt-3">Area (A) = w x l</p>
+              <div class="my-5">
+                <input
+                  class="bg-slate-200 rounded-sm w-24 mr-2 size-9 text-center"
+                  type="text"
+                  name="rectangle"
+                  id="rectangle-base"
+                  placeholder="b"
+                /><span>cm</span>
+                <input
+                  class="bg-slate-200 rounded-sm w-24 mr-2 size-9 text-center"
+                  type="text"
+                  name="rectangle"
+                  id="rectangle-height"
+                  placeholder="h"
+                /><span>cm</span>
+              </div>
+              <p>Area: <span>0</span> <span>cm <sup>2</sup></span></p>
+              <div class="card-actions w-full mt-3">
+                <button class="btn bg-green-300 w-full text-xl">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Parallelogram shape -->
+          <div class="card max-w-96 bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="./images/parallelogram.png"
+                alt="rectangle"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-3xl">Prallelogram</h2>
+              <p class="mt-3">Area (A) = b x h</p>
+              <div class="my-5">
+                <input
+                  class="bg-slate-200 rounded-sm w-24 mr-2 size-9 text-center"
+                  type="text"
+                  name="rectangle"
+                  id="triangle-base"
+                  placeholder="b"
+                /><span>cm</span>
+                <input
+                  class="bg-slate-200 rounded-sm w-24 mr-2 size-9 text-center"
+                  type="text"
+                  name=""
+                  id="triangle-height"
+                  placeholder="h"
+                /><span>cm</span>
+              </div>
+              <p>Area: <span>0</span> <span>cm <sup>2</sup></span></p>
+              <div class="card-actions w-full mt-3">
+                <button class="btn bg-green-300 w-full text-xl">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- calculation dispaly area -->
+        <div class="w-44">
+          <h3 class="p-3 border-2 border-gray-300 rounded-md ">
+            Area calculation
+          </h3>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  <footer></footer>
+</html>
